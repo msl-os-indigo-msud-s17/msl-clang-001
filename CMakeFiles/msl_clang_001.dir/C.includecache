@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/main.c
+ctype.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
