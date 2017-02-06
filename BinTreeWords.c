@@ -20,24 +20,39 @@ void DestructNode(struct Node *);
 int DetectTrailingPunctuation(char *word);
 int FindWord(char *target, struct Node *current_node);
 struct Node *InitializeNode(char *clean_word);
+void ParseInputFileString();
 void PreOrderTraversal(struct Node *current_node);
+void PrintPreOrderTraversalToFile(struct Node *current_node);
 void PostOrderTraversal(struct Node *current_node);
 void ReadInputFile();
 char *RemoveTrailingPunctuation(char *word);
 struct Node *ReturnWord(char *target, struct Node *current_node);
+char *StripInputFileIdentifier(char *in);
 char *ToLowerCase(char *word);
 
 struct Node *root = NULL;
+char *input_file;
+char *output_file;
 
-int main() {
+int main(int argc, char **argv) {
+  if (argc != 2) {
+    printf("Usage: BinTreeWords input_file.txt\n");
+    exit(0);
+  }
+
+  input_file = argv[1];
+
+  ParseInputFileString();
 
   ReadInputFile();
 
   PreOrderTraversal(root);
 
-  printf("\n");
+  PrintPreOrderTraversalToFile(root);
 
-  DestructTree(root);
+  //printf("\n");
+
+  //DestructTree(root);
 
   return 0;
 }
@@ -213,7 +228,7 @@ int DetectTrailingPunctuation(char *word) {
 
 int FindWord(char *target, struct Node *current_node) {
   // Return 1 if the target was found and its count was incremented.
-  // Return 0 if the targetword was not found.
+  // Return 0 if the target word was not found.
   if (current_node == NULL)
     return 0;
   else if (strcmp(target, current_node->word) == 0)
@@ -234,6 +249,51 @@ struct Node *InitializeNode(char *clean_word) {
   new_node->parent_node = NULL;
 
   return new_node;
+}
+
+void ParseInputFileString() {
+  char *out = "output";
+  char *txt = ".txt";
+  char *in_file;
+  int input_file_length;
+  int index_length = 0;
+  int input_file_index_index;
+  int input_file_index;
+  int txt_index = 0;
+  int output_file_length;
+
+  in_file = StripInputFileIdentifier(input_file);
+  input_file_length = strlen(in_file);
+  input_file_index = input_file_length;
+
+  if (!isdigit(in_file[input_file_length-1])) {
+    printf("Error: input file must be indexed, e.g. 'input01'\n");
+    exit(0);
+  }
+
+  while (isdigit(in_file[--input_file_index]))
+    index_length++;
+
+  input_file_index_index = input_file_length - index_length;
+
+  output_file_length = 6 + index_length + 4;
+
+  output_file = (char *) malloc(output_file_length * sizeof(char) + 1);
+
+  for (int i = 0; i < 6; i++)
+    output_file[i] = out[i];
+
+  for (int i = 6; i < 6 + index_length; i++) 
+    output_file[i] = in_file[input_file_index_index++];
+
+  for (int i = 6 + index_length; i < 6 + index_length + 4; i++)
+    output_file[i] = txt[txt_index++];
+
+  output_file[6+index_length+4] = '\0';
+
+  printf("%s\n", output_file);
+
+  return;
 }
 
 void PostOrderTraversal(struct Node *current_node) {
@@ -262,18 +322,38 @@ void PreOrderTraversal(struct Node *current_node) {
   return;
 }
 
+void PrintPreOrderTraversalToFile(struct Node *current_node) {
+  FILE *output;
+
+  if (current_node == root)
+    output = fopen(output_file, "w+");
+  else
+    output = fopen(output_file, "a");
+
+  if (current_node == NULL)
+    return;
+
+  PrintPreOrderTraversalToFile(current_node->left_child);
+
+  fprintf(output, "%s: %d\n", current_node->word, current_node->occurences);
+  fclose(output);
+
+  PrintPreOrderTraversalToFile(current_node->right_child);
+
+  return;
+}
+
 void ReadInputFile() {
   // Read a .txt input file word by word. Delete any trailing punctuation
   // characters appended to each word, convert each word to lowercase, and
   // store each word in a binary tree.
   char word[256];
-  char *input = "./input02.txt";
-  FILE *input_file;
+  FILE *input;
 
-  input_file = fopen(input, "r");
+  input = fopen(input_file, "r");
 
-  if (input_file != NULL) {
-    while (fscanf(input_file, " %255s", word) == 1) {
+  if (input != NULL) {
+    while (fscanf(input, " %255s", word) == 1) {
       char *cleaned_word = CleanWord(word);
       struct Node *new_node = InitializeNode(cleaned_word);
 
@@ -323,6 +403,29 @@ struct Node *ReturnWord(char *target, struct Node *current_node) {
     return ReturnWord(target, current_node->left_child);
   else
     return NULL;
+}
+
+char *StripInputFileIdentifier(char *in_string) {
+  char *out_string;
+  int out_string_length;
+  int file_identifier_length;
+  int file_identifier_index = 0;
+
+  while (in_string[file_identifier_index] != '.')
+    file_identifier_index++;
+
+  file_identifier_length = strlen(in_string) - file_identifier_index;
+
+  out_string_length = strlen(in_string) - file_identifier_length;
+
+  out_string = (char *) malloc(out_string_length * sizeof(char) + 1);
+
+  for (int i = 0; i < out_string_length; i++)
+    out_string[i] = in_string[i];
+
+  out_string[out_string_length] = '\0';
+
+  return out_string;
 }
 
 char *ToLowerCase(char *word) {

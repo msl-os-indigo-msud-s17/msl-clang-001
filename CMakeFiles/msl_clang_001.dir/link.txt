@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/msl_clang_001.dir/main.c.o  -o msl_clang_001 
+/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o  -o msl_clang_001 

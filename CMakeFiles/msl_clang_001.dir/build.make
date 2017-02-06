@@ -57,38 +57,38 @@ include CMakeFiles/msl_clang_001.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/msl_clang_001.dir/flags.make
 
-CMakeFiles/msl_clang_001.dir/main.c.o: CMakeFiles/msl_clang_001.dir/flags.make
-CMakeFiles/msl_clang_001.dir/main.c.o: main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/msl_clang_001.dir/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/msl_clang_001.dir/main.c.o   -c /Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/main.c
+CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o: CMakeFiles/msl_clang_001.dir/flags.make
+CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o: BinTreeWords.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o   -c /Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/BinTreeWords.c
 
-CMakeFiles/msl_clang_001.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/msl_clang_001.dir/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/main.c > CMakeFiles/msl_clang_001.dir/main.c.i
+CMakeFiles/msl_clang_001.dir/BinTreeWords.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/msl_clang_001.dir/BinTreeWords.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/BinTreeWords.c > CMakeFiles/msl_clang_001.dir/BinTreeWords.c.i
 
-CMakeFiles/msl_clang_001.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/msl_clang_001.dir/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/main.c -o CMakeFiles/msl_clang_001.dir/main.c.s
+CMakeFiles/msl_clang_001.dir/BinTreeWords.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/msl_clang_001.dir/BinTreeWords.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/BinTreeWords.c -o CMakeFiles/msl_clang_001.dir/BinTreeWords.c.s
 
-CMakeFiles/msl_clang_001.dir/main.c.o.requires:
+CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o.requires:
 
-.PHONY : CMakeFiles/msl_clang_001.dir/main.c.o.requires
+.PHONY : CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o.requires
 
-CMakeFiles/msl_clang_001.dir/main.c.o.provides: CMakeFiles/msl_clang_001.dir/main.c.o.requires
-	$(MAKE) -f CMakeFiles/msl_clang_001.dir/build.make CMakeFiles/msl_clang_001.dir/main.c.o.provides.build
-.PHONY : CMakeFiles/msl_clang_001.dir/main.c.o.provides
+CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o.provides: CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o.requires
+	$(MAKE) -f CMakeFiles/msl_clang_001.dir/build.make CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o.provides.build
+.PHONY : CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o.provides
 
-CMakeFiles/msl_clang_001.dir/main.c.o.provides.build: CMakeFiles/msl_clang_001.dir/main.c.o
+CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o.provides.build: CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o
 
 
 # Object files for target msl_clang_001
 msl_clang_001_OBJECTS = \
-"CMakeFiles/msl_clang_001.dir/main.c.o"
+"CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o"
 
 # External object files for target msl_clang_001
 msl_clang_001_EXTERNAL_OBJECTS =
 
-msl_clang_001: CMakeFiles/msl_clang_001.dir/main.c.o
+msl_clang_001: CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o
 msl_clang_001: CMakeFiles/msl_clang_001.dir/build.make
 msl_clang_001: CMakeFiles/msl_clang_001.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable msl_clang_001"
@@ -99,7 +99,7 @@ CMakeFiles/msl_clang_001.dir/build: msl_clang_001
 
 .PHONY : CMakeFiles/msl_clang_001.dir/build
 
-CMakeFiles/msl_clang_001.dir/requires: CMakeFiles/msl_clang_001.dir/main.c.o.requires
+CMakeFiles/msl_clang_001.dir/requires: CMakeFiles/msl_clang_001.dir/BinTreeWords.c.o.requires
 
 .PHONY : CMakeFiles/msl_clang_001.dir/requires
 

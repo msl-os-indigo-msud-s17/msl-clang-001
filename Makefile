@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named msl_clang_001
+# Target rules for targets named BinTreeWords
 
 # Build rule for target.
-msl_clang_001: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 msl_clang_001
-.PHONY : msl_clang_001
+BinTreeWords: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BinTreeWords
+.PHONY : BinTreeWords
 
 # fast build rule for target.
-msl_clang_001/fast:
-	$(MAKE) -f CMakeFiles/msl_clang_001.dir/build.make CMakeFiles/msl_clang_001.dir/build
-.PHONY : msl_clang_001/fast
+BinTreeWords/fast:
+	$(MAKE) -f CMakeFiles/BinTreeWords.dir/build.make CMakeFiles/BinTreeWords.dir/build
+.PHONY : BinTreeWords/fast
 
-main.o: main.c.o
+BinTreeWords.o: BinTreeWords.c.o
 
-.PHONY : main.o
+.PHONY : BinTreeWords.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/msl_clang_001.dir/build.make CMakeFiles/msl_clang_001.dir/main.c.o
-.PHONY : main.c.o
+BinTreeWords.c.o:
+	$(MAKE) -f CMakeFiles/BinTreeWords.dir/build.make CMakeFiles/BinTreeWords.dir/BinTreeWords.c.o
+.PHONY : BinTreeWords.c.o
 
-main.i: main.c.i
+BinTreeWords.i: BinTreeWords.c.i
 
-.PHONY : main.i
+.PHONY : BinTreeWords.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/msl_clang_001.dir/build.make CMakeFiles/msl_clang_001.dir/main.c.i
-.PHONY : main.c.i
+BinTreeWords.c.i:
+	$(MAKE) -f CMakeFiles/BinTreeWords.dir/build.make CMakeFiles/BinTreeWords.dir/BinTreeWords.c.i
+.PHONY : BinTreeWords.c.i
 
-main.s: main.c.s
+BinTreeWords.s: BinTreeWords.c.s
 
-.PHONY : main.s
+.PHONY : BinTreeWords.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/msl_clang_001.dir/build.make CMakeFiles/msl_clang_001.dir/main.c.s
-.PHONY : main.c.s
+BinTreeWords.c.s:
+	$(MAKE) -f CMakeFiles/BinTreeWords.dir/build.make CMakeFiles/BinTreeWords.dir/BinTreeWords.c.s
+.PHONY : BinTreeWords.c.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... msl_clang_001"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... BinTreeWords"
+	@echo "... BinTreeWords.o"
+	@echo "... BinTreeWords.i"
+	@echo "... BinTreeWords.s"
 .PHONY : help
 
 
