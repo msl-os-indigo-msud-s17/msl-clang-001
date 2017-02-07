@@ -6,12 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/BinTreeWords.c
-ctype.h
--
+/Users/colehocking/CLionProjects/msl-clang-002/BinTreeWords.c
 stdio.h
 -
 stdlib.h
+-
+ctype.h
 -
 string.h
 -

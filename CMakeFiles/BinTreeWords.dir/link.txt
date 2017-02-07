@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/BinTreeWords.dir/BinTreeWords.c.o  -o BinTreeWords 
+/Library/Developer/CommandLineTools/usr/bin/cc  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/BinTreeWords.dir/BinTreeWords.c.o  -o BinTreeWords 

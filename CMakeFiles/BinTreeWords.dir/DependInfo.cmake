@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/BinTreeWords.c" "/Users/nicholassaulnier/Desktop/Operating_Systems/msl-clang-001/CMakeFiles/BinTreeWords.dir/BinTreeWords.c.o"
+  "/Users/colehocking/CLionProjects/msl-clang-002/BinTreeWords.c" "/Users/colehocking/CLionProjects/msl-clang-002/CMakeFiles/BinTreeWords.dir/BinTreeWords.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
