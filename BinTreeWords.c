@@ -50,9 +50,12 @@ int main(int argc, char **argv) {
 
   PrintPreOrderTraversalToFile(root);
 
-  //printf("\n");
+  printf("\n");
 
-  //DestructTree(root);
+  DestructTree(root);
+
+  free(output_file);
+  free(input_file);
 
   return 0;
 }
@@ -137,7 +140,7 @@ int CountPunctuationChars(char *string) {
   ch = string[index++];
 
   while (ch != '\0') {
-    if (ispunct(ch))
+    if (ispunct(ch) || ch == '"' || ch == "”")
       punctuation_count++;
     ch = string[index++];
   }
@@ -283,7 +286,7 @@ void ParseInputFileString() {
   for (int i = 0; i < 6; i++)
     output_file[i] = out[i];
 
-  for (int i = 6; i < 6 + index_length; i++) 
+  for (int i = 6; i < 6 + index_length; i++)
     output_file[i] = in_file[input_file_index_index++];
 
   for (int i = 6 + index_length; i < 6 + index_length + 4; i++)
@@ -291,7 +294,7 @@ void ParseInputFileString() {
 
   output_file[6+index_length+4] = '\0';
 
-  printf("%s\n", output_file);
+  free(in_file);
 
   return;
 }
